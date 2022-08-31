@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".activity.NewUserActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--   <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="230dp"
+                   android:layout_alignParentBottom="true"
+                   android:background="@drawable/design_top" />
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="150dp"
+                   android:background="@drawable/bg_greadentbackprofile"
+                   android:visibility="visible" />
+   -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imgback"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/pmidum"
+                android:text="Profile"
+                android:textColor="@color/pink_ff008f"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/editButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_pencil"
+                android:tint="@color/black" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lytprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lytimage"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="-50dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_greadent"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="65dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/round_gragiant_blue_purpal"
+                                android:onClick="onClickCoin"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="5dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:layout_marginVertical="3dp"
+                                    android:src="@drawable/coins" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:minWidth="15dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    tools:text="" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="60dp"
+                                android:layout_marginBottom="15dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pbold"
+                                        android:text="Dhruval"
+                                        android:textColor="@color/white"
+                                        android:textSize="24sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/username"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pmidum"
+                                        android:text="@string/dummyname"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tvbio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/plight"
+                                    android:gravity="center"
+                                    android:maxLines="3"
+                                    android:paddingHorizontal="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    tools:text="your bio here" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@color/grecolor" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/lytfollowrs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pmidum"
+                                            android:text="FANS"
+                                            android:textColor="@color/white" />
+
+                                        <TextView
+                                            android:id="@+id/tvfollowrs"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pmidum"
+                                            android:text="0"
+                                            android:textColor="@color/white"
+                                            android:textSize="18sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lytfollowing"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pmidum"
+                                            android:text="FOLLOWING"
+                                            android:textColor="@color/white" />
+
+                                        <TextView
+                                            android:id="@+id/tvfollowing"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pmidum"
+                                            android:text="0"
+                                            android:textColor="@color/white"
+                                            android:textSize="18sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lytcoin"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:visibility="gone"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pmidum"
+                                            android:text="COINS"
+                                            android:textColor="@color/graydark" />
+
+                                        <TextView
+                                            android:id="@+id/tvcoin"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pmidum"
+                                            android:text="0"
+                                            android:textColor="@color/white"
+                                            android:textSize="18sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/lytwallet"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red">
+
+                            <ImageView
+                                android:id="@+id/logo"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_mine_coinstore" />
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="50dp"
+                                android:background="@drawable/bg_coinsstore" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/logo"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="COIN STORE"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="My coins: "
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp" />
+
+                                    <TextView
+                                        android:id="@+id/coins"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/white" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/lytchat"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:padding="2dp"
+                                android:src="@drawable/ic_chat"
+                                android:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Message"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lytbecomehost"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:padding="2dp"
+                                android:src="@drawable/ic_user_gre"
+                                android:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Host Request"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lythistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_history"
+                                android:padding="2dp"
+                                android:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="History"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lytfavourite"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_like" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Favorite"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/lytaboutus"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_baseline_info_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="About us"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/lytsupport"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_support" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Support us"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/lytShare"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_share"
+                                android:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Share us"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lytrate"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_round_star_24"
+                                android:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Rate us"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lytprivacy"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_baseline_lock_24"
+                                android:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Privacy Policy"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lytSwitchUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="50dp"
+                            android:background="@drawable/bg_gradiant_btn_red"
+                            >
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ic_baseline_login_24"
+                                android:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="80dp"
+                                android:text="Switch user"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                                android:backgroundTint="@color/me_gre" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lytimage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/imgprofile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_whitebtnround"
+                            android:backgroundTint="@color/white"
+                            android:padding="2dp" />
+
+
+                        <TextView
+                            android:id="@+id/profilechar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="A"
+                            android:textColor="@color/purple"
+                            android:textSize="40dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+
+            android:visibility="gone"
+            app:shimmer_base_color="@color/shimmergray"
+            app:shimmer_colored="true"
+            app:shimmer_highlight_color="@color/white">
+
+            <include
+
+                layout="@layout/item_shimmerprofile"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/pd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="#FF0358"
+            app:indicatorName="BallClipRotatePulseIndicator" />
+
+    </RelativeLayout>
+</layout>

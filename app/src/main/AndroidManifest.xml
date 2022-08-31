@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zakux.live">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.PREVENT_POWER_KEY" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/app_logo"
+        android:screenOrientation="landscape"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TomoLive"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.callwork.TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.callwork.AudioCallActivity"
+            android:exported="false" />
+        <activity android:name=".activity.ChatActivityFake" />
+        <activity android:name=".activity.callwork.FakeCallActivity" />
+        <activity
+            android:name=".activity.SearchNewFriendsDoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchForNewFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.callwork.HostWaitingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HostRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.purchase.CoinPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.callwork.CallRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.callwork.CallScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.callwork.VideoCallActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.WebActivity" />
+        <activity
+            android:name=".activity.FakeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FavouriteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FollowListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GuestProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WatchLiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SpleshActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChatListActivityOriginal"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9769543735678271~6361326813" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <receiver
+            android:name=".networkManager.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".FirebaseMessage"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".networkManager.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".MyBroadCastReciever"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyApp" />
+    </application>
+
+</manifest>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_greadent"
+        tools:context=".activity.callwork.CallRequestActivity">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.Large.DoubleBounce"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/lytImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_whitebtnround" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="70dp"
+                android:background="@drawable/bg_whitebtnround" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lytImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/pbold"
+            android:text="Calling ..."
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lytImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="Waiting for Sushmita's Reply ...."
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+
+        <ImageView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnDecline"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/bg_whitebtnround"
+            android:backgroundTint="@color/red"
+            android:elevation="8dp"
+            android:padding="15dp"
+            android:rotation="135"
+            android:src="@drawable/ic_phone_call_simple"
+            android:tint="@color/white" />
+
+
+    </RelativeLayout>
+</layout>

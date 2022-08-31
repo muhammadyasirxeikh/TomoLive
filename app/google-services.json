@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "990734758338",
+    "project_id": "mojulive-33170",
+    "storage_bucket": "mojulive-33170.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990734758338:android:53aad966c686d340efa65b",
+        "android_client_info": {
+          "package_name": "com.moju.live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990734758338-uv3877vpm8ivbvqm7p05bovqsh93jt50.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu0RRdkFr9XoYbOsDBwkSf7CCO6cqPH88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990734758338-uv3877vpm8ivbvqm7p05bovqsh93jt50.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

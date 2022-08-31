@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_greadent"
+        tools:context=".activity.CallScreenActivity">
+
+        <RelativeLayout
+            android:id="@+id/lytImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.Large.DoubleBounce"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_whitebtnround"
+                android:padding="3dp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lytImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/pbold"
+            android:text="Anurag Savaliya"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Incoming Call ..."
+            android:textColor="@color/white" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnDecline"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_whitebtnround"
+                android:backgroundTint="@color/red"
+                android:elevation="8dp"
+                android:padding="15dp"
+                android:rotation="135"
+                android:src="@drawable/ic_phone_call_simple"
+                android:tint="@color/white" />
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/btnAccept"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_whitebtnround"
+                android:backgroundTint="#4CAF50"
+                android:elevation="8dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_phone_call_simple"
+                android:tint="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

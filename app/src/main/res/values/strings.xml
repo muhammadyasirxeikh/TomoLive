@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Moju Live</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummyname">@dhruvalhapani1</string>
+
+
+    <string name="googlepay_status_unavailable">Unfortunately, Google Pay is not available on this device.</string>
+    <string name="payments_show_name">Successfully received payment data for %s!</string>
+    <string name="gateway_replace_name_example">"Gateway name set to \"example\" - please modify Constants.java and replace it with your own gateway."</string>
+    <string name="checkout_item_description">Description</string>
+    <string name="play_lic_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnY8H5P4fRFEytOvNSX5ny9OXJJEwuRGoB7vYyQxYBFdZgD0UwJxFqd/uYh7eE9AH6BJLcKE9iiCnpNuS7qFV2VgBOL1WReAjQ9CyCoYYcbjaPAHINhpnK8naaWneStq6M7Hn02FqFX7/RRUwiB8WxmEUt5NV1YmsKDDBm42dCjbNwOVIdnR86zk/ItHn6wjPNcUGXNtG+HPnnpzq/ptYenpF2qT3s/wolLi4vnbwtxhyv9jLFjwfVpRltQ4GcbB0+bfEBZ9w8wvs3bhpXF9JFbhw/aubjBCKnIr+HCUWyH5WavDzMsS1zy7mi54RJjNj/JrKpmN49rpc7m7rKZD/wQIDAQAB</string>
+    <string name="entercarddetails">Please Enter Card Details</string>
+
+    <string name="host_notes">Note : it is NOT ALLOWED to upload any pornographic text or image contents. If violations are verified, the corporation will be terminated directly and the earnings will be not settled</string>
+
+    <string name="desc_2">Please briefly introducation your characteristics and  to attact other to date you</string>
+    <string name="dec_1">Please upload your picture of real people and the first picture will be used as the cover of the dating hosts list.(You can not upload landscap photos,physical,animal photos or comics,and blurred images.)</string>
+    <string name="video_type_match">Random Matching</string>
+    <string name="match_guide_click">Tap the screen to start</string>
+    <string name="both">Both</string>
+</resources>
